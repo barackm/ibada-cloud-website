@@ -13,7 +13,7 @@
     ],
     "cta": {
       "label": "Request a demo",
-      "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20—%20Request%20a%20demo"
+      "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20-%20Request%20a%20demo"
     },
     "mobileMenuLabel": "Menu",
     "mobileCloseLabel": "Close menu"
@@ -24,7 +24,7 @@
     "description": "Ibada Cloud brings members, branches, activities, finances, and Smart Forms into one operating layer. Built for teams that need structure, not another scattered inbox.",
     "primaryCta": {
       "label": "Request a demo",
-      "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20—%20Request%20a%20demo"
+      "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20-%20Request%20a%20demo"
     },
     "secondaryCta": {
       "label": "View pricing",
@@ -52,7 +52,7 @@
   "pricing": {
     "id": "pricing",
     "title": "Pricing that scales with your church",
-    "subtitle": "Three clear plans. Compare detail below—cards stay simple.",
+    "subtitle": "Three clear plans. Compare detail below, cards stay simple.",
     "plans": [
       {
         "id": "essential",
@@ -74,7 +74,7 @@
         ],
         "cta": {
           "label": "Request a demo",
-          "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20—%20Essential"
+          "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20-%20Essential"
         }
       },
       {
@@ -99,7 +99,7 @@
         ],
         "cta": {
           "label": "Request a demo",
-          "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20—%20Growth"
+          "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20-%20Growth"
         }
       },
       {
@@ -118,11 +118,11 @@
           "Deeper financial organization for audits and leadership reviews",
           "Priority support with faster response on operational issues",
           "Built for multi-site churches and finance teams under one roof",
-          "Everything in Growth is included — same workflows, no artificial caps"
+          "Everything in Growth is included, same workflows, no artificial caps"
         ],
         "cta": {
           "label": "Request a demo",
-          "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20—%20Scale"
+          "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20-%20Scale"
         }
       }
     ]
@@ -130,7 +130,7 @@
   "pricingComparison": {
     "id": "compare",
     "title": "Compare plans in detail",
-    "subtitle": "Limits, capabilities, and what Scale adds—side by side.",
+    "subtitle": "Limits, capabilities, and what Scale adds, side by side.",
     "mobileScrollHint": "Swipe horizontally on small screens to see all plans.",
     "featureColumnLabel": "Capability",
     "recommendedLabel": "Popular",
@@ -164,7 +164,7 @@
       {
         "label": "Form limit",
         "format": "text",
-        "values": { "essential": "—", "growth": "~5–10 forms", "scale": "Unlimited" }
+        "values": { "essential": "-", "growth": "~5–10 forms", "scale": "Unlimited" }
       },
       {
         "label": "Pledges",
@@ -253,11 +253,11 @@
     "description": "Request a demo and see how Ibada Cloud can support your church.",
     "primaryCta": {
       "label": "Request a demo",
-      "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20—%20Request%20a%20demo"
+      "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20-%20Request%20a%20demo"
     },
     "secondaryCta": {
       "label": "Contact us",
-      "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20—%20Contact"
+      "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20-%20Contact"
     }
   },
   "footer": {
@@ -270,7 +270,7 @@
       { "label": "Pricing", "href": "#pricing" },
       {
         "label": "Request a demo",
-        "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20—%20Request%20a%20demo"
+        "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20-%20Request%20a%20demo"
       }
     ],
     "copyright": "© {year} Ibada Cloud. All rights reserved."

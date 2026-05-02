@@ -14,18 +14,18 @@
     ],
     "cta": {
       "label": "Demander une démo",
-      "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20—%20Demande%20de%20démo"
+      "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20-%20Demande%20de%20démo"
     },
     "mobileMenuLabel": "Menu",
     "mobileCloseLabel": "Fermer le menu"
   },
   "hero": {
     "eyebrow": "Opérations d'église, simplifiées",
-    "headline": "Gérez votre église avec clarté — sans désordre.",
+    "headline": "Gérez votre église avec clarté, sans désordre.",
     "description": "Ibada Cloud réunit membres, branches, activités, finances et formulaires intelligents en une seule couche opérationnelle. Conçu pour les équipes qui ont besoin de structure, pas d'une boîte de réception supplémentaire.",
     "primaryCta": {
       "label": "Demander une démo",
-      "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20—%20Demande%20de%20démo"
+      "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20-%20Demande%20de%20démo"
     },
     "secondaryCta": {
       "label": "Voir les tarifs",
@@ -59,7 +59,7 @@
     "highlights": [
       {
         "title": "Conçu pour ce usage",
-        "body": "Des parcours pensés pour paroisses et multi-sites — pas un CRM générique."
+        "body": "Des parcours pensés pour paroisses et multi-sites, pas un CRM générique."
       },
       {
         "title": "Tarifs clairs",
@@ -74,7 +74,7 @@
   "pricing": {
     "id": "pricing",
     "title": "Des tarifs qui évoluent avec votre église",
-    "subtitle": "Trois formules claires. Comparez les détails ci-dessous — les cartes restent simples.",
+    "subtitle": "Trois formules claires. Comparez les détails ci-dessous, les cartes restent simples.",
     "plans": [
       {
         "id": "essential",
@@ -93,7 +93,7 @@
         ],
         "cta": {
           "label": "Demander une démo",
-          "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20—%20Essentiel"
+          "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20-%20Essentiel"
         }
       },
       {
@@ -115,7 +115,7 @@
         ],
         "cta": {
           "label": "Demander une démo",
-          "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20—%20Croissance"
+          "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20-%20Croissance"
         }
       },
       {
@@ -136,7 +136,7 @@
         ],
         "cta": {
           "label": "Demander une démo",
-          "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20—%20Échelle"
+          "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20-%20Échelle"
         }
       }
     ]
@@ -144,7 +144,7 @@
   "pricingComparison": {
     "id": "compare",
     "title": "Comparez les formules en détail",
-    "subtitle": "Limites, capacités et ce qu'ajoute Échelle — côte à côte.",
+    "subtitle": "Limites, capacités et ce qu'ajoute Échelle, côte à côte.",
     "mobileScrollHint": "Faites défiler horizontalement sur les petits écrans pour voir toutes les formules.",
     "featureColumnLabel": "Fonctionnalité",
     "recommendedLabel": "Populaire",
@@ -178,7 +178,7 @@
       {
         "label": "Limite de formulaires",
         "format": "text",
-        "values": { "essential": "—", "growth": "~5–10 formulaires", "scale": "Illimité" }
+        "values": { "essential": "-", "growth": "~5–10 formulaires", "scale": "Illimité" }
       },
       {
         "label": "Promesses",
@@ -267,7 +267,7 @@
     "description": "Demandez une démo et découvrez comment Ibada Cloud peut soutenir votre église.",
     "primaryCta": {
       "label": "Demander une démo",
-      "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20—%20Demande%20de%20démo"
+      "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20-%20Demande%20de%20démo"
     },
     "secondaryCta": {
       "label": "Nous contacter",
@@ -276,7 +276,7 @@
   },
   "contact": {
     "metaTitle": "Contact",
-    "metaDescription": "Contactez Ibada Cloud — démos, questions sur les tarifs et accompagnement pour les opérations d'église.",
+    "metaDescription": "Contactez Ibada Cloud, démos, questions sur les tarifs et accompagnement pour les opérations d'église.",
     "eyebrow": "Contact",
     "title": "Parlons de vos opérations d'église",
     "description": "Demandez une démo, posez vos questions sur les tarifs ou décrivez votre contexte. Nous lisons chaque message et répondons dès que possible.",
@@ -290,9 +290,9 @@
     "pricingPrompt": "Vous préférez d'abord les chiffres ?",
     "pricingLinkLabel": "Voir les tarifs sur la page d'accueil",
     "formCardTitle": "Envoyer un message",
-    "formCardSubtitle": "Quelques détails suffisent ; nous vous répondrons par e-mail. Pas de spam — juste un échange.",
+    "formCardSubtitle": "Quelques détails suffisent ; nous vous répondrons par e-mail. Pas de spam, juste un échange.",
     "form": {
-      "mailtoSubject": "Ibada Cloud — Formulaire de contact",
+      "mailtoSubject": "Ibada Cloud, Formulaire de contact",
       "nameLabel": "Nom",
       "emailLabel": "E-mail",
       "organizationLabel": "Église ou organisation",
@@ -315,7 +315,7 @@
       { "label": "Contact", "href": "/#contact" },
       {
         "label": "Demander une démo",
-        "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20—%20Demande%20de%20démo"
+        "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20-%20Demande%20de%20démo"
       }
     ],
     "copyright": "© {year} Ibada Cloud. Tous droits réservés."

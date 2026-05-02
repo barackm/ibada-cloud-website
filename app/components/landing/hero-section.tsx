@@ -4,6 +4,7 @@ import type { WebsiteContent } from "@/src/lib/website-content";
 import type { Locale } from "@/dictionaries/index";
 import { withLang } from "@/app/lib/routes";
 import { cn } from "@/lib/utils";
+import { FadeIn } from "@/app/components/motion";
 
 type HeroSectionProps = {
   hero: WebsiteContent["hero"];
@@ -156,28 +157,34 @@ export function HeroSection({ hero, lang }: HeroSectionProps) {
 
       <div className={cn("relative z-10 mx-auto max-w-6xl px-4 sm:px-6", heroTopPad, "pb-12 sm:pb-16 lg:pb-20")}>
         <div className='mx-auto max-w-2xl text-center'>
-          <p className='text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-[#9CA3AF] sm:text-xs'>
-            {hero.eyebrow}
-          </p>
-          <div
-            className='mx-auto mt-3 h-px w-12 bg-gradient-to-r from-transparent via-[#059669]/70 to-transparent'
-            aria-hidden
-          />
+          <FadeIn delay={0}>
+            <p className='text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-[#9CA3AF] sm:text-xs'>
+              {hero.eyebrow}
+            </p>
+            <div
+              className='mx-auto mt-3 h-px w-12 bg-gradient-to-r from-transparent via-[#059669]/70 to-transparent'
+              aria-hidden
+            />
+          </FadeIn>
 
-          <h1
-            className={cn(
-              "mx-auto mt-6 max-w-[15ch] text-balance text-[1.9rem] font-semibold leading-[1.12] tracking-[-0.032em] min-[400px]:max-w-lg sm:mt-7 sm:max-w-2xl sm:text-4xl sm:leading-[1.08] md:text-[2.75rem] md:leading-[1.06]",
-              "text-[#F3F4F6]",
-            )}
-          >
-            {hero.headline}
-          </h1>
+          <FadeIn delay={0.1}>
+            <h1
+              className={cn(
+                "mx-auto mt-6 max-w-[15ch] text-balance text-[1.9rem] font-semibold leading-[1.12] tracking-[-0.032em] min-[400px]:max-w-lg sm:mt-7 sm:max-w-2xl sm:text-4xl sm:leading-[1.08] md:text-[2.75rem] md:leading-[1.06]",
+                "text-[#F3F4F6]",
+              )}
+            >
+              {hero.headline}
+            </h1>
+          </FadeIn>
 
-          <p className='mx-auto mt-5 max-w-lg text-pretty text-sm leading-relaxed text-[#9CA3AF] sm:mt-6 sm:text-base sm:leading-7'>
-            {hero.description}
-          </p>
+          <FadeIn delay={0.18}>
+            <p className='mx-auto mt-5 max-w-lg text-pretty text-sm leading-relaxed text-[#9CA3AF] sm:mt-6 sm:text-base sm:leading-7'>
+              {hero.description}
+            </p>
+          </FadeIn>
 
-          <div className='mt-7 flex justify-center sm:mt-9'>
+          <FadeIn delay={0.26} className='mt-7 flex justify-center sm:mt-9'>
             <div
               className={cn(
                 "inline-flex max-w-full items-center gap-2 rounded-full border border-white/15 py-1 pl-3 pr-1",
@@ -207,23 +214,25 @@ export function HeroSection({ hero, lang }: HeroSectionProps) {
                 {hero.primaryCta.label}
               </Link>
             </div>
-          </div>
+          </FadeIn>
 
           {tertiary ? (
-            <Link
-              href={withLang(tertiary.href, lang)}
-              className='mt-8 inline-flex max-w-prose flex-wrap items-center justify-center gap-2 text-left text-sm leading-snug text-[#6B7280] underline-offset-4 transition-colors hover:text-[#E5E7EB]'
-            >
-              <span>{tertiary.label}</span>
-              <span aria-hidden className='font-medium text-[#34d399]'>
-                →
-              </span>
-            </Link>
+            <FadeIn delay={0.32}>
+              <Link
+                href={withLang(tertiary.href, lang)}
+                className='mt-8 inline-flex max-w-prose flex-wrap items-center justify-center gap-2 text-left text-sm leading-snug text-[#6B7280] underline-offset-4 transition-colors hover:text-[#E5E7EB]'
+              >
+                <span>{tertiary.label}</span>
+                <span aria-hidden className='font-medium text-[#34d399]'>
+                  →
+                </span>
+              </Link>
+            </FadeIn>
           ) : null}
         </div>
 
         {!imageUrl && focusPoints.length > 0 ? (
-          <div className='relative mx-auto mt-14 max-w-5xl sm:mt-16'>
+          <FadeIn delay={0.4} className='relative mx-auto mt-14 max-w-5xl sm:mt-16'>
             <div
               className='absolute -inset-px rounded-2xl bg-gradient-to-b from-white/[0.08] via-transparent to-transparent opacity-80 blur-sm sm:rounded-3xl'
               aria-hidden
@@ -245,11 +254,11 @@ export function HeroSection({ hero, lang }: HeroSectionProps) {
                 ))}
               </div>
             </div>
-          </div>
+          </FadeIn>
         ) : null}
 
         {imageUrl ? (
-          <div className='relative mx-auto mt-16 max-w-6xl sm:mt-20 lg:mt-24'>
+          <FadeIn delay={0.4} className='relative mx-auto mt-16 max-w-6xl sm:mt-20 lg:mt-24'>
             <div className='pointer-events-none absolute inset-x-0 top-0 z-10 h-16 bg-gradient-to-b from-[#070a10] to-transparent sm:h-20' />
 
             <div className='mx-auto max-w-5xl [perspective:1600px]'>
@@ -286,7 +295,7 @@ export function HeroSection({ hero, lang }: HeroSectionProps) {
                 </div>
               </div>
             </div>
-          </div>
+          </FadeIn>
         ) : null}
       </div>
 

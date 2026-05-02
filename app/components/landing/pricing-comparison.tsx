@@ -1,6 +1,4 @@
-"use client";
-
-import { Fragment, useMemo, useState } from "react";
+import { Fragment } from "react";
 import { cn } from "@/lib/utils";
 import type { WebsiteContent } from "@/src/lib/website-content";
 
@@ -13,7 +11,6 @@ type PricingComparisonProps = {
 
 type ComparisonRow = WebsiteContent["pricingComparison"]["rows"][number];
 
-/** Desktop table intrinsic width (enabled only on lg+). */
 const comparisonMinInner = "lg:min-w-[56rem]";
 const comparisonGridCols =
   "grid w-full grid-cols-[minmax(10.5rem,30%)_repeat(3,minmax(0,1fr))]";
@@ -22,10 +19,10 @@ const stickyFeatureBg = "bg-[#111827]";
 function Check() {
   return (
     <span
-      className="inline-flex size-6 items-center justify-center rounded-full bg-[#059669]/15 text-[#34d399]"
+      className="inline-flex size-5 items-center justify-center rounded-full bg-[#059669]/15 text-[#34d399]"
       aria-hidden
     >
-      <svg className="size-3.5" viewBox="0 0 16 16" fill="currentColor">
+      <svg className="size-3" viewBox="0 0 16 16" fill="currentColor">
         <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 1 1 1.06-1.06L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z" />
       </svg>
     </span>
@@ -35,7 +32,7 @@ function Check() {
 function ExMark() {
   return (
     <span
-      className="inline-flex size-6 items-center justify-center rounded-full bg-[#374151]/35 text-sm font-light text-[#9CA3AF]"
+      className="inline-flex size-5 items-center justify-center rounded-full bg-[#374151]/35 text-xs font-light text-[#9CA3AF]"
       aria-hidden
     >
       ×
@@ -85,13 +82,14 @@ function MobileValue({
   if (format === "boolean") {
     const included = value === true;
     return (
-      <span className="inline-flex items-center gap-2 text-sm text-[#D1D5DB]">
+      <span className="inline-flex items-center justify-center gap-1.5 text-xs text-[#D1D5DB]">
         {included ? <Check /> : <ExMark />}
+        <span>{included ? "Yes" : "No"}</span>
       </span>
     );
   }
 
-  return <span className="text-sm leading-relaxed text-[#D1D5DB]">{String(value)}</span>;
+  return <span className="text-xs leading-relaxed text-[#D1D5DB]">{String(value)}</span>;
 }
 
 function PlanHeaderCard({
@@ -129,45 +127,83 @@ function PlanHeaderCard({
 
 function MobileFeatureRow({
   row,
-  selectedPlanId,
+  planOrder,
+  planLabels,
 }: {
   row: ComparisonRow;
-  selectedPlanId: string;
+  planOrder: readonly string[];
+  planLabels: readonly string[];
 }) {
-  const rawValue = row.values[selectedPlanId as keyof typeof row.values] ?? false;
+  return (
+    <article className="rounded-lg border border-white/8 bg-[#111827]/45 px-3 py-3">
+      <h4 className="text-sm font-medium leading-snug text-[#F3F4F6]">{row.label}</h4>
+      <dl className="mt-2.5 grid grid-cols-3 gap-2">
+        {planOrder.map((planId, idx) => {
+          const value = row.values[planId as keyof typeof row.values] ?? false;
+          const label = planLabels[idx] ?? planId;
+          return (
+            <div key={`${row.label}-${planId}`} className="rounded-md border border-white/8 bg-[#0c1320] px-2 py-2">
+              <dt className="truncate text-[0.65rem] font-semibold uppercase tracking-wide text-[#9CA3AF]">
+                {label}
+              </dt>
+              <dd className="mt-1 min-h-6 text-center">
+                <MobileValue
+                  format={row.format as "boolean" | "text"}
+                  value={value as boolean | string}
+                />
+              </dd>
+            </div>
+          );
+        })}
+      </dl>
+    </article>
+  );
+}
+
+function MobileGroup({
+  title,
+  rows,
+  defaultOpen,
+  planOrder,
+  planLabels,
+}: {
+  title: string;
+  rows: readonly ComparisonRow[];
+  defaultOpen?: boolean;
+  planOrder: readonly string[];
+  planLabels: readonly string[];
+}) {
+  if (rows.length === 0) return null;
 
   return (
-    <article className="rounded-xl border border-[#374151]/55 bg-[#1F2937]/45 px-4 py-3.5">
-      <h3 className="text-sm font-semibold leading-snug text-[#F9FAFB]">{row.label}</h3>
-      <div className="mt-2.5 rounded-lg border border-white/8 bg-[#111827]/55 px-3 py-2.5">
-        <MobileValue
-          format={row.format as "boolean" | "text"}
-          value={rawValue as boolean | string}
-        />
+    <details
+      className="group overflow-hidden rounded-xl border border-[#374151]/55 bg-[#1F2937]/45"
+      open={defaultOpen}
+    >
+      <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-4 py-3 text-sm font-semibold text-[#F9FAFB]">
+        <span>{title}</span>
+        <span className="text-[#9CA3AF] transition group-open:rotate-45">+</span>
+      </summary>
+      <div className="space-y-3 border-t border-[#374151]/45 px-3 py-3">
+        {rows.map((row) => (
+          <MobileFeatureRow
+            key={row.label}
+            row={row}
+            planOrder={planOrder}
+            planLabels={planLabels}
+          />
+        ))}
       </div>
-    </article>
+    </details>
   );
 }
 
 export function PricingComparison({ comparison, plans }: PricingComparisonProps) {
   const planOrder = comparison.planColumnIds;
-  const plansById = useMemo(() => new Map(plans.map((p) => [p.id, p])), [plans]);
+  const plansById = new Map(plans.map((p) => [p.id, p]));
   const orderedPlans = planOrder
     .map((id) => plansById.get(id))
     .filter((p): p is Plan => p != null);
-
-  const initialPlanId = planOrder.includes("growth") ? "growth" : (planOrder[0] ?? "");
-  const [selectedPlanId, setSelectedPlanId] = useState(initialPlanId);
-
-  const selectedPlan = useMemo(
-    () => plansById.get(selectedPlanId) ?? orderedPlans[0] ?? null,
-    [orderedPlans, plansById, selectedPlanId],
-  );
-
-  const selectedPlanLabel = useMemo(() => {
-    const idx = planOrder.indexOf(selectedPlanId);
-    return idx >= 0 ? comparison.planColumnLabels[idx] ?? selectedPlanId : selectedPlanId;
-  }, [comparison.planColumnLabels, planOrder, selectedPlanId]);
 
   const featureLabel =
     "featureColumnLabel" in comparison && comparison.featureColumnLabel
@@ -249,57 +285,24 @@ export function PricingComparison({ comparison, plans }: PricingComparisonProps)
 
       <div className="mt-10 w-full min-w-0 max-w-full px-3 sm:px-4 md:px-6 lg:px-10">
         <div className="space-y-4 lg:hidden">
-          <div className="rounded-xl border border-white/10 bg-[#111827]/55 p-2">
-            <div className="grid grid-cols-3 gap-1">
-              {planOrder.map((planId, idx) => {
-                const label = comparison.planColumnLabels[idx] ?? planId;
-                const active = planId === selectedPlanId;
-                return (
-                  <button
-                    key={planId}
-                    type="button"
-                    onClick={() => setSelectedPlanId(planId)}
-                    aria-pressed={active}
-                    className={cn(
-                      "rounded-lg px-2 py-2 text-xs font-semibold uppercase tracking-wide transition-colors",
-                      active
-                        ? "bg-[#374151] text-[#F9FAFB]"
-                        : "bg-transparent text-[#9CA3AF] hover:bg-white/5 hover:text-[#E5E7EB]",
-                    )}
-                  >
-                    {label}
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-
-          {selectedPlan ? (
-            <PlanHeaderCard
-              plan={selectedPlan}
-              isGrowth={selectedPlan.id === "growth"}
-              recommendedLabel={comparison.recommendedLabel}
-            />
-          ) : null}
-
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#6B7280]">
-            {featureLabel}: <span className="text-[#9CA3AF]">{selectedPlanLabel}</span>
+          <p className="px-1 text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[#6B7280]">
+            {featureLabel}
           </p>
 
-          {essentialRows.map((row) => (
-            <MobileFeatureRow key={row.label} row={row} selectedPlanId={selectedPlanId} />
-          ))}
+          <MobileGroup
+            title="Core features"
+            rows={essentialRows}
+            defaultOpen
+            planOrder={planOrder}
+            planLabels={comparison.planColumnLabels}
+          />
 
-          {scaleRows.length > 0 ? (
-            <div className="pt-2">
-              <h3 className="text-sm font-semibold tracking-tight text-[#F9FAFB]">Scale only</h3>
-              <div className="mt-3 space-y-4">
-                {scaleRows.map((row) => (
-                  <MobileFeatureRow key={row.label} row={row} selectedPlanId={selectedPlanId} />
-                ))}
-              </div>
-            </div>
-          ) : null}
+          <MobileGroup
+            title="Scale only"
+            rows={scaleRows}
+            planOrder={planOrder}
+            planLabels={comparison.planColumnLabels}
+          />
         </div>
 
         <div

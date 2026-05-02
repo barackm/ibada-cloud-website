@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { InView } from "@/app/components/motion";
 import {
   PLATFORM_LOGO_COMPACT_DARK_URL,
   PLATFORM_LOGO_COMPACT_LIGHT_URL,
@@ -41,7 +42,7 @@ export function Footer({ footer, lang }: FooterProps) {
       />
       <div className="border-t border-white/10 px-4 pb-10 pt-12 sm:px-6 sm:pb-12 sm:pt-14">
         <div className="mx-auto max-w-6xl">
-          <div className="grid gap-12 lg:grid-cols-12 lg:gap-x-10 lg:gap-y-0">
+          <InView className="grid gap-12 lg:grid-cols-12 lg:gap-x-10 lg:gap-y-0">
             <div className="lg:col-span-5">
               <Link
                 href={withLang("/", lang)}
@@ -124,9 +125,9 @@ export function Footer({ footer, lang }: FooterProps) {
                 >
                   {footer.contactEmail}
                 </a>
-              </div>
             </div>
           </div>
+        </InView>
 
           <div className="mt-10 flex flex-col items-center gap-4 border-t border-white/10 pt-8 text-xs text-[#6B7280] sm:mt-12 sm:flex-row sm:justify-between sm:pt-8">
             <p>{copyright}</p>

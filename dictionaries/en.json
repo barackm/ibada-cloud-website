@@ -14,7 +14,7 @@
     ],
     "cta": {
       "label": "Request a demo",
-      "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20—%20Request%20a%20demo"
+      "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20-%20Request%20a%20demo"
     },
     "mobileMenuLabel": "Menu",
     "mobileCloseLabel": "Close menu"
@@ -25,7 +25,7 @@
     "description": "Ibada Cloud brings members, branches, activities, finances, and Smart Forms into one operating layer. Built for teams that need structure, not another scattered inbox.",
     "primaryCta": {
       "label": "Request a demo",
-      "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20—%20Request%20a%20demo"
+      "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20-%20Request%20a%20demo"
     },
     "secondaryCta": {
       "label": "View pricing",
@@ -54,12 +54,12 @@
     "id": "about",
     "eyebrow": "About",
     "title": "Software shaped around how churches actually operate",
-    "lead": "Ibada Cloud replaces scattered tools and ad hoc workflows with one structured layer—so leaders see what matters and teams spend less time reconciling data.",
+    "lead": "Ibada Cloud replaces scattered tools and ad hoc workflows with one structured layer, so leaders see what matters and teams spend less time reconciling data.",
     "body": "We focus on membership, branches, activities, money in and out, and repeatable intake through Smart Forms. You get clear objects and sensible limits by plan, plus exports when you need to work offline or share with finance volunteers and accountants.",
     "highlights": [
       {
         "title": "Purpose-built",
-        "body": "Flows reflect parishes and multi-site churches—not generic “accounts.”"
+        "body": "Flows reflect parishes and multi-site churches, not generic “accounts.”"
       },
       {
         "title": "Honest pricing",
@@ -74,7 +74,7 @@
   "pricing": {
     "id": "pricing",
     "title": "Pricing that scales with your church",
-    "subtitle": "Three clear plans. Compare detail below—cards stay simple.",
+    "subtitle": "Three clear plans. Compare detail below, cards stay simple.",
     "plans": [
       {
         "id": "essential",
@@ -96,7 +96,7 @@
         ],
         "cta": {
           "label": "Request a demo",
-          "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20—%20Essential"
+          "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20-%20Essential"
         }
       },
       {
@@ -121,7 +121,7 @@
         ],
         "cta": {
           "label": "Request a demo",
-          "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20—%20Growth"
+          "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20-%20Growth"
         }
       },
       {
@@ -140,11 +140,11 @@
           "Deeper financial organization for audits and leadership reviews",
           "Priority support with faster response on operational issues",
           "Built for multi-site churches and finance teams under one roof",
-          "Everything in Growth is included — same workflows, no artificial caps"
+          "Everything in Growth is included, same workflows, no artificial caps"
         ],
         "cta": {
           "label": "Request a demo",
-          "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20—%20Scale"
+          "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20-%20Scale"
         }
       }
     ]
@@ -152,7 +152,7 @@
   "pricingComparison": {
     "id": "compare",
     "title": "Compare plans in detail",
-    "subtitle": "Limits, capabilities, and what Scale adds—side by side.",
+    "subtitle": "Limits, capabilities, and what Scale adds, side by side.",
     "mobileScrollHint": "Swipe horizontally on small screens to see all plans.",
     "featureColumnLabel": "Capability",
     "recommendedLabel": "Popular",
@@ -186,7 +186,7 @@
       {
         "label": "Form limit",
         "format": "text",
-        "values": { "essential": "—", "growth": "~5–10 forms", "scale": "Unlimited" }
+        "values": { "essential": "-", "growth": "~5–10 forms", "scale": "Unlimited" }
       },
       {
         "label": "Pledges",
@@ -275,7 +275,7 @@
     "description": "Request a demo and see how Ibada Cloud can support your church.",
     "primaryCta": {
       "label": "Request a demo",
-      "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20—%20Request%20a%20demo"
+      "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20-%20Request%20a%20demo"
     },
     "secondaryCta": {
       "label": "Contact us",
@@ -284,7 +284,7 @@
   },
   "contact": {
     "metaTitle": "Contact",
-    "metaDescription": "Get in touch with Ibada Cloud — demos, pricing questions, and support for church operations.",
+    "metaDescription": "Get in touch with Ibada Cloud, demos, pricing questions, and support for church operations.",
     "eyebrow": "Contact",
     "title": "Let's talk about your church operations",
     "description": "Request a demo, ask about pricing, or share what you're trying to solve. We read every message and reply as soon as we can.",
@@ -298,9 +298,9 @@
     "pricingPrompt": "Prefer to skim numbers first?",
     "pricingLinkLabel": "View pricing on the homepage",
     "formCardTitle": "Send a message",
-    "formCardSubtitle": "Share a few details and we'll follow up by email. No spam — just a conversation.",
+    "formCardSubtitle": "Share a few details and we'll follow up by email. No spam, just a conversation.",
     "form": {
-      "mailtoSubject": "Ibada Cloud — Contact form",
+      "mailtoSubject": "Ibada Cloud, Contact form",
       "nameLabel": "Name",
       "emailLabel": "Email",
       "organizationLabel": "Church or organization",
@@ -323,7 +323,7 @@
       { "label": "Contact", "href": "/#contact" },
       {
         "label": "Request a demo",
-        "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20—%20Request%20a%20demo"
+        "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20-%20Request%20a%20demo"
       }
     ],
     "copyright": "© {year} Ibada Cloud. All rights reserved."
