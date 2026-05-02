@@ -1,0 +1,323 @@
+{
+  "site": {
+    "title": "Ibada Cloud",
+    "description": "Ibada Cloud aide les églises à gérer les membres, les branches, les activités, les finances, les formulaires et les opérations quotidiennes depuis une plateforme structurée.",
+    "url": "https://www.ibadacloud.com"
+  },
+  "navigation": {
+    "links": [
+      { "label": "Accueil", "href": "/" },
+      { "label": "À propos", "href": "/#about" },
+      { "label": "Tarifs", "href": "/#pricing" },
+      { "label": "Comparer", "href": "/#compare" },
+      { "label": "Contact", "href": "/#contact" }
+    ],
+    "cta": {
+      "label": "Demander une démo",
+      "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20—%20Demande%20de%20démo"
+    },
+    "mobileMenuLabel": "Menu",
+    "mobileCloseLabel": "Fermer le menu"
+  },
+  "hero": {
+    "eyebrow": "Opérations d'église, simplifiées",
+    "headline": "Gérez votre église avec clarté — sans désordre.",
+    "description": "Ibada Cloud réunit membres, branches, activités, finances et formulaires intelligents en une seule couche opérationnelle. Conçu pour les équipes qui ont besoin de structure, pas d'une boîte de réception supplémentaire.",
+    "primaryCta": {
+      "label": "Demander une démo",
+      "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20—%20Demande%20de%20démo"
+    },
+    "secondaryCta": {
+      "label": "Voir les tarifs",
+      "href": "/#pricing"
+    },
+    "tertiaryCta": {
+      "label": "Aperçu des tarifs et comparaison complète des fonctionnalités",
+      "href": "/#compare"
+    },
+    "focusPoints": [
+      {
+        "title": "Gestion structurée des membres",
+        "body": "Foyers, branches et contexte pastoral restent organisés à mesure que vous grandissez."
+      },
+      {
+        "title": "Opérations et finances",
+        "body": "Activités, catégories et rapports adaptés au fonctionnement réel des églises."
+      },
+      {
+        "title": "Formulaires intelligents",
+        "body": "Collectez l'information une fois, acheminez-la proprement et réduisez les échanges de suivi."
+      }
+    ]
+  },
+  "about": {
+    "id": "about",
+    "eyebrow": "À propos",
+    "title": "Un logiciel calqué sur la réalité des églises",
+    "lead": "Ibada Cloud remplace outils épars et improvisations par une couche structurée : les responsables voient l'essentiel et les équipes passent moins de temps à recoller les données.",
+    "body": "Nous concentrons l'effort sur les membres, les branches, les activités, les entrées et sorties d'argent, et les collectes récurrentes via des formulaires intelligents. Des objets clairs, des limites cohérentes par formule, et des exports quand vous devez travailler hors ligne ou partager avec la finance.",
+    "highlights": [
+      {
+        "title": "Conçu pour ce usage",
+        "body": "Des parcours pensés pour paroisses et multi-sites — pas un CRM générique."
+      },
+      {
+        "title": "Tarifs clairs",
+        "body": "Des paliers transparents pour anticiper quand la fréquentation et les branches augmentent."
+      },
+      {
+        "title": "Des humains derrière le produit",
+        "body": "Écrivez-nous pour les démos, la mise en route et le support du quotidien."
+      }
+    ]
+  },
+  "pricing": {
+    "id": "pricing",
+    "title": "Des tarifs qui évoluent avec votre église",
+    "subtitle": "Trois formules claires. Comparez les détails ci-dessous — les cartes restent simples.",
+    "plans": [
+      {
+        "id": "essential",
+        "name": "Essentiel",
+        "priceDisplay": "9,99 $",
+        "priceNote": "/ mois",
+        "tagline": "Organisez-vous",
+        "description": "Pour les petites églises structurant leurs opérations quotidiennes.",
+        "popular": false,
+        "accent": "green",
+        "cardFeatures": [
+          "Jusqu'à 250 membres · 1 branche",
+          "Gestion des membres et des activités",
+          "Finance de base et catégories simples",
+          "Flux de travail fondamentaux uniquement"
+        ],
+        "cta": {
+          "label": "Demander une démo",
+          "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20—%20Essentiel"
+        }
+      },
+      {
+        "id": "growth",
+        "name": "Croissance",
+        "priceDisplay": "19,99 $",
+        "priceNote": "/ mois",
+        "tagline": "Gagnez du temps sur les opérations",
+        "description": "Tout ce qu'inclut Essentiel, plus les formulaires, les promesses et une légère automatisation.",
+        "popular": true,
+        "popularLabel": "Populaire",
+        "accent": "orange",
+        "cardFeatures": [
+          "Jusqu'à 2 000 membres · 5 branches",
+          "Formulaires intelligents jusqu'à 10",
+          "Promesses et automatisation de base",
+          "Export CSV ou Excel",
+          "Tout ce qu'inclut Essentiel"
+        ],
+        "cta": {
+          "label": "Demander une démo",
+          "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20—%20Croissance"
+        }
+      },
+      {
+        "id": "scale",
+        "name": "Échelle",
+        "priceDisplay": "39,99 $",
+        "priceNote": "/ mois",
+        "tagline": "Visibilité et contrôle complets",
+        "description": "Tout ce qu'inclut Croissance, avec une capacité illimitée et des rapports avancés.",
+        "popular": false,
+        "accent": "green",
+        "cardFeatures": [
+          "Membres, branches et formulaires illimités",
+          "Rapports avancés et export structuré",
+          "Organisation financière avancée",
+          "Assistance prioritaire",
+          "Tout ce qu'inclut Croissance"
+        ],
+        "cta": {
+          "label": "Demander une démo",
+          "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20—%20Échelle"
+        }
+      }
+    ]
+  },
+  "pricingComparison": {
+    "id": "compare",
+    "title": "Comparez les formules en détail",
+    "subtitle": "Limites, capacités et ce qu'ajoute Échelle — côte à côte.",
+    "mobileScrollHint": "Faites défiler horizontalement sur les petits écrans pour voir toutes les formules.",
+    "featureColumnLabel": "Fonctionnalité",
+    "recommendedLabel": "Populaire",
+    "planColumnLabels": ["Essentiel", "Croissance", "Échelle"],
+    "planColumnIds": ["essential", "growth", "scale"],
+    "smartFormsNote": {
+      "label": "Formulaires intelligents (aperçu)",
+      "format": "text",
+      "values": {
+        "essential": "Non inclus",
+        "growth": "Inscriptions, promesses, activités et champs personnalisés s'intègrent au système.",
+        "scale": "Formulaires illimités avec la même saisie structurée."
+      }
+    },
+    "rows": [
+      {
+        "label": "Limite de membres",
+        "format": "text",
+        "values": { "essential": "250", "growth": "2 000", "scale": "Illimité" }
+      },
+      {
+        "label": "Limite de branches",
+        "format": "text",
+        "values": { "essential": "1", "growth": "5", "scale": "Illimité" }
+      },
+      {
+        "label": "Formulaires intelligents",
+        "format": "boolean",
+        "values": { "essential": false, "growth": true, "scale": true }
+      },
+      {
+        "label": "Limite de formulaires",
+        "format": "text",
+        "values": { "essential": "—", "growth": "~5–10 formulaires", "scale": "Illimité" }
+      },
+      {
+        "label": "Promesses",
+        "format": "boolean",
+        "values": { "essential": false, "growth": true, "scale": true }
+      },
+      {
+        "label": "Automatisation de base",
+        "format": "boolean",
+        "values": { "essential": false, "growth": true, "scale": true }
+      },
+      {
+        "label": "Export de base (CSV / Excel)",
+        "format": "boolean",
+        "values": { "essential": false, "growth": true, "scale": true }
+      },
+      {
+        "label": "Formulaires intelligents illimités",
+        "format": "boolean",
+        "values": { "essential": false, "growth": false, "scale": true }
+      },
+      {
+        "label": "Rapports financiers avancés",
+        "format": "boolean",
+        "values": { "essential": false, "growth": false, "scale": true }
+      },
+      {
+        "label": "Résumés mensuels et annuels",
+        "format": "boolean",
+        "values": { "essential": false, "growth": false, "scale": true }
+      },
+      {
+        "label": "Ventilations par catégorie et tendances",
+        "format": "boolean",
+        "values": { "essential": false, "growth": false, "scale": true }
+      },
+      {
+        "label": "Export avancé",
+        "format": "boolean",
+        "values": { "essential": false, "growth": false, "scale": true }
+      },
+      {
+        "label": "Filtrer et sélectionner ce que vous exportez",
+        "format": "boolean",
+        "values": { "essential": false, "growth": false, "scale": true }
+      },
+      {
+        "label": "Export Excel ou PDF structuré",
+        "format": "boolean",
+        "values": { "essential": false, "growth": false, "scale": true }
+      },
+      {
+        "label": "Organisation financière avancée",
+        "format": "boolean",
+        "values": { "essential": false, "growth": false, "scale": true }
+      },
+      {
+        "label": "Assistance prioritaire",
+        "format": "boolean",
+        "values": { "essential": false, "growth": false, "scale": true }
+      },
+      {
+        "label": "Gestion des membres",
+        "format": "boolean",
+        "values": { "essential": true, "growth": true, "scale": true }
+      },
+      {
+        "label": "Activités",
+        "format": "boolean",
+        "values": { "essential": true, "growth": true, "scale": true }
+      },
+      {
+        "label": "Suivi financier de base",
+        "format": "boolean",
+        "values": { "essential": true, "growth": true, "scale": true }
+      },
+      {
+        "label": "Catégories simples",
+        "format": "boolean",
+        "values": { "essential": true, "growth": true, "scale": true }
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt à organiser les opérations de votre église ?",
+    "description": "Demandez une démo et découvrez comment Ibada Cloud peut soutenir votre église.",
+    "primaryCta": {
+      "label": "Demander une démo",
+      "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20—%20Demande%20de%20démo"
+    },
+    "secondaryCta": {
+      "label": "Nous contacter",
+      "href": "/#contact"
+    }
+  },
+  "contact": {
+    "metaTitle": "Contact",
+    "metaDescription": "Contactez Ibada Cloud — démos, questions sur les tarifs et accompagnement pour les opérations d'église.",
+    "eyebrow": "Contact",
+    "title": "Parlons de vos opérations d'église",
+    "description": "Demandez une démo, posez vos questions sur les tarifs ou décrivez votre contexte. Nous lisons chaque message et répondons dès que possible.",
+    "directLabel": "Écrivez-nous directement",
+    "responseBlurb": "Nous répondons en général sous un à deux jours ouvrables. En cas d'urgence, indiquez-le dans votre message.",
+    "bullets": [
+      "Démos adaptées à votre équipe et à vos outils actuels",
+      "Conseils sur les formules, limites et déploiement",
+      "Questions sur la sécurité, les données et l'assistance"
+    ],
+    "pricingPrompt": "Vous préférez d'abord les chiffres ?",
+    "pricingLinkLabel": "Voir les tarifs sur la page d'accueil",
+    "formCardTitle": "Envoyer un message",
+    "formCardSubtitle": "Quelques détails suffisent ; nous vous répondrons par e-mail. Pas de spam — juste un échange.",
+    "form": {
+      "mailtoSubject": "Ibada Cloud — Formulaire de contact",
+      "nameLabel": "Nom",
+      "emailLabel": "E-mail",
+      "organizationLabel": "Église ou organisation",
+      "messageLabel": "Comment pouvons-nous aider ?",
+      "submitLabel": "Ouvrir l'e-mail",
+      "note": "Ceci ouvre votre application de messagerie avec le message prérempli. Vous pouvez modifier avant d'envoyer.",
+      "validationHint": "Ajoutez votre e-mail et un court message pour que nous puissions répondre."
+    }
+  },
+  "footer": {
+    "id": "footer",
+    "description": "Ibada Cloud est une plateforme structurée pour les membres, les branches, les activités, les finances, les formulaires intelligents et les opérations d'église.",
+    "contactEmail": "hello@ibadacloud.com",
+    "contactLabel": "E-mail",
+    "backToTopLabel": "Haut de page",
+    "links": [
+      { "label": "Accueil", "href": "/" },
+      { "label": "À propos", "href": "/#about" },
+      { "label": "Tarifs", "href": "/#pricing" },
+      { "label": "Contact", "href": "/#contact" },
+      {
+        "label": "Demander une démo",
+        "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20—%20Demande%20de%20démo"
+      }
+    ],
+    "copyright": "© {year} Ibada Cloud. Tous droits réservés."
+  }
+}
