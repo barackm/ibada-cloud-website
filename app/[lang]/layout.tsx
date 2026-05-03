@@ -136,11 +136,12 @@ export async function generateMetadata({
     },
     icons: {
       icon: [
-        { url: PLATFORM_LOGO_ICON_URL, type: "image/png" },
-        { url: PLATFORM_LOGO_ICON_URL, sizes: "32x32", type: "image/png" },
+        { url: "/favicon.ico", type: "image/x-icon" },
+        { url: "/brand/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+        { url: "/brand/favicon-16x16.png", sizes: "16x16", type: "image/png" },
         { url: PLATFORM_LOGO_ICON_URL, sizes: "192x192", type: "image/png" },
       ],
-      shortcut: [{ url: PLATFORM_LOGO_ICON_URL }],
+      shortcut: [{ url: "/favicon.ico", type: "image/x-icon" }],
       apple: [
         { url: PLATFORM_LOGO_ICON_URL, sizes: "180x180", type: "image/png" },
       ],

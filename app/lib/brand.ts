@@ -1,7 +1,7 @@
 export const PLATFORM_SITE_URL = "https://www.ibadacloud.com";
 
 export const PLATFORM_LOGO_ICON_URL =
-  "https://43xwcw28al.ufs.sh/f/tbb5cnLUpe9RXoqb86BJNzfubgIy6WBOLovGVtHwhklmdZK3";
+  "/brand/logo-icon.png";
 
 export const PLATFORM_LOGO_COMPACT_LIGHT_URL =
   "https://43xwcw28al.ufs.sh/f/tbb5cnLUpe9R9y7El7Qu7PUz5BhbDwnqre0u1i3dlKWFpvCI";

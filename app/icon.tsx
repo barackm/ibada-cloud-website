@@ -1,5 +1,5 @@
 import { ImageResponse } from "next/og";
-import { PLATFORM_LOGO_ICON_URL } from "./lib/brand";
+import { PLATFORM_LOGO_ICON_URL, PLATFORM_SITE_URL } from "./lib/brand";
 
 export const size = {
   width: 512,
@@ -9,6 +9,8 @@ export const size = {
 export const contentType = "image/png";
 
 export default function Icon() {
+  const iconUrl = new URL(PLATFORM_LOGO_ICON_URL, PLATFORM_SITE_URL).toString();
+
   return new ImageResponse(
     (
       <div
@@ -22,7 +24,7 @@ export default function Icon() {
         }}
       >
         <img
-          src={PLATFORM_LOGO_ICON_URL}
+          src={iconUrl}
           alt="Ibada Cloud"
           width={512}
           height={512}

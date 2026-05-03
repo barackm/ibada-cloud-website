@@ -2,6 +2,7 @@ import type { Viewport } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { defaultLocale } from "@/dictionaries/index";
 import { PLATFORM_BRAND_COLOR, PLATFORM_LIGHT_BACKGROUND } from "./lib/brand";
 import { headers } from "next/headers";
 
@@ -30,11 +31,12 @@ export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   const h = await headers();
-  const lang = h.get("x-lang") ?? "en";
+  const lang = h.get("x-lang") ?? defaultLocale;
 
   return (
     <html
       lang={lang}
+      suppressHydrationWarning
       className={cn(
         "dark h-full",
         "antialiased",

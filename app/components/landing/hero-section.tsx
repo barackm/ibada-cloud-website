@@ -126,7 +126,7 @@ export function HeroSection({ hero, lang }: HeroSectionProps) {
       : null;
 
   const heroTopPad =
-    "pt-[calc(5.75rem+env(safe-area-inset-top))] sm:pt-[calc(6.25rem+env(safe-area-inset-top))] lg:pt-[calc(6.5rem+env(safe-area-inset-top))]";
+    "pt-[calc(7.5rem+env(safe-area-inset-top))] sm:pt-[calc(8rem+env(safe-area-inset-top))] lg:pt-[calc(8.25rem+env(safe-area-inset-top))]";
 
   return (
     <section id='top' className='relative overflow-hidden bg-[#070a10] pb-0 text-[#F9FAFB]'>
