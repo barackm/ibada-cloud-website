@@ -7,9 +7,10 @@
   "navigation": {
     "links": [
       { "label": "Home", "href": "/" },
-      { "label": "About", "href": "/#about" },
-      { "label": "Pricing", "href": "/#pricing" },
-      { "label": "Compare", "href": "/#compare" },
+      { "label": "Platform", "href": "/platform" },
+      { "label": "Solutions", "href": "/solutions" },
+      { "label": "Guides", "href": "/guides" },
+      { "label": "Pricing", "href": "/compare/church-management-software-pricing" },
       { "label": "Contact", "href": "/#contact" }
     ],
     "cta": {
@@ -29,11 +30,11 @@
     },
     "secondaryCta": {
       "label": "View pricing",
-      "href": "/#pricing"
+      "href": "/compare/church-management-software-pricing"
     },
     "tertiaryCta": {
-      "label": "Preview pricing and the full feature comparison",
-      "href": "/#compare"
+      "label": "Read the software evaluation guide",
+      "href": "/guides/how-to-choose-church-management-software"
     },
     "focusPoints": [
       {
@@ -278,8 +279,8 @@
       "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20-%20Request%20a%20demo"
     },
     "secondaryCta": {
-      "label": "Contact us",
-      "href": "/#contact"
+      "label": "Read buying guides",
+      "href": "/guides"
     }
   },
   "contact": {
@@ -318,8 +319,10 @@
     "backToTopLabel": "Back to top",
     "links": [
       { "label": "Home", "href": "/" },
-      { "label": "About", "href": "/#about" },
-      { "label": "Pricing", "href": "/#pricing" },
+      { "label": "Platform", "href": "/platform" },
+      { "label": "Solutions", "href": "/solutions" },
+      { "label": "Guides", "href": "/guides" },
+      { "label": "Pricing", "href": "/compare/church-management-software-pricing" },
       { "label": "Contact", "href": "/#contact" },
       {
         "label": "Request a demo",

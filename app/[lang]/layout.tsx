@@ -11,46 +11,23 @@ import {
   PLATFORM_LOGO_ICON_URL,
   PLATFORM_SITE_URL,
 } from "@/app/lib/brand";
+import { JsonLd } from "@/app/components/seo/json-ld";
+import {
+  getAlternateLocales,
+  getLanguageAlternates,
+  getSeoLocaleConfig,
+} from "@/src/lib/seo/config";
+import { getHomepageKeywordSet } from "@/src/lib/seo/pages";
+import {
+  buildOrganizationSchema,
+  buildWebsiteSchema,
+} from "@/src/lib/seo/schema";
 
 export async function generateStaticParams() {
   return locales.map((lang) => ({ lang }));
 }
 
 type Params = Promise<{ lang: string }>;
-
-// Maps our locale codes to BCP-47 / OpenGraph locale strings
-const OG_LOCALE: Record<Locale, string> = {
-  en: "en_US",
-  fr: "fr_FR",
-};
-
-// Locale-specific keywords
-const KEYWORDS: Record<Locale, string[]> = {
-  en: [
-    "Ibada Cloud",
-    "church management software",
-    "church CRM",
-    "church operations",
-    "church forms",
-    "church finance",
-    "membership management",
-    "parish management",
-    "Smart Forms",
-    "church platform",
-  ],
-  fr: [
-    "Ibada Cloud",
-    "logiciel de gestion d'église",
-    "CRM église",
-    "opérations d'église",
-    "formulaires d'église",
-    "finances d'église",
-    "gestion des membres",
-    "gestion paroissiale",
-    "formulaires intelligents",
-    "plateforme d'église",
-  ],
-};
 
 const OG_IMAGE = {
   url: "/product/website-screenshot.png",
@@ -69,8 +46,12 @@ export async function generateMetadata({
   const locale = lang as Locale;
   const content = await getDictionary(locale);
   const { site } = content;
-  const ogLocale = OG_LOCALE[locale];
-  const alternateLocales = locales.filter((l) => l !== locale);
+
+  const localeConfig = getSeoLocaleConfig(locale);
+  const alternates = getLanguageAlternates("");
+  const alternateLocale = getAlternateLocales(locale).map(
+    (value) => getSeoLocaleConfig(value).ogLocale,
+  );
 
   return {
     metadataBase: new URL(PLATFORM_SITE_URL),
@@ -80,7 +61,7 @@ export async function generateMetadata({
       template: `%s | ${site.title}`,
     },
     description: site.description,
-    keywords: KEYWORDS[locale],
+    keywords: getHomepageKeywordSet(locale),
     authors: [{ name: "Ibada Cloud", url: PLATFORM_SITE_URL }],
     creator: "Ibada Cloud",
     publisher: "Ibada Cloud",
@@ -97,20 +78,17 @@ export async function generateMetadata({
       },
     },
     alternates: {
-      canonical: `/${lang}`,
-      languages: Object.fromEntries([
-        [ogLocale, `/${lang}`],
-        ...alternateLocales.map((l) => [OG_LOCALE[l], `/${l}`]),
-      ]),
+      canonical: `/${locale}`,
+      languages: alternates,
     },
     openGraph: {
       type: "website",
-      url: `${PLATFORM_SITE_URL}/${lang}`,
+      url: `${PLATFORM_SITE_URL}/${locale}`,
       siteName: site.title,
       title: site.title,
       description: site.description,
-      locale: ogLocale,
-      alternateLocale: alternateLocales.map((l) => OG_LOCALE[l]),
+      locale: localeConfig.ogLocale,
+      alternateLocale,
       images: [
         {
           ...OG_IMAGE,
@@ -142,9 +120,7 @@ export async function generateMetadata({
         { url: PLATFORM_LOGO_ICON_URL, sizes: "192x192", type: "image/png" },
       ],
       shortcut: [{ url: "/favicon.ico", type: "image/x-icon" }],
-      apple: [
-        { url: PLATFORM_LOGO_ICON_URL, sizes: "180x180", type: "image/png" },
-      ],
+      apple: [{ url: PLATFORM_LOGO_ICON_URL, sizes: "180x180", type: "image/png" }],
     },
     other: {
       "msapplication-TileColor": PLATFORM_BRAND_COLOR,
@@ -163,5 +139,16 @@ export default async function LocaleLayout({
 }) {
   const { lang } = await params;
   if (!hasLocale(lang)) notFound();
-  return <>{children}</>;
+
+  const locale = lang as Locale;
+  const websiteSchema = buildWebsiteSchema(locale);
+  const organizationSchema = buildOrganizationSchema(locale);
+
+  return (
+    <>
+      <JsonLd data={websiteSchema} />
+      <JsonLd data={organizationSchema} />
+      {children}
+    </>
+  );
 }

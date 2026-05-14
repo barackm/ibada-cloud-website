@@ -7,9 +7,10 @@
   "navigation": {
     "links": [
       { "label": "Accueil", "href": "/" },
-      { "label": "À propos", "href": "/#about" },
-      { "label": "Tarifs", "href": "/#pricing" },
-      { "label": "Comparer", "href": "/#compare" },
+      { "label": "Plateforme", "href": "/platform" },
+      { "label": "Solutions", "href": "/solutions" },
+      { "label": "Guides", "href": "/guides" },
+      { "label": "Tarifs", "href": "/compare/church-management-software-pricing" },
       { "label": "Contact", "href": "/#contact" }
     ],
     "cta": {
@@ -29,11 +30,11 @@
     },
     "secondaryCta": {
       "label": "Voir les tarifs",
-      "href": "/#pricing"
+      "href": "/compare/church-management-software-pricing"
     },
     "tertiaryCta": {
-      "label": "Aperçu des tarifs et comparaison complète des fonctionnalités",
-      "href": "/#compare"
+      "label": "Lire le guide de choix logiciel",
+      "href": "/guides/how-to-choose-church-management-software"
     },
     "focusPoints": [
       {
@@ -270,8 +271,8 @@
       "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20-%20Demande%20de%20démo"
     },
     "secondaryCta": {
-      "label": "Nous contacter",
-      "href": "/#contact"
+      "label": "Lire les guides",
+      "href": "/guides"
     }
   },
   "contact": {
@@ -310,8 +311,10 @@
     "backToTopLabel": "Haut de page",
     "links": [
       { "label": "Accueil", "href": "/" },
-      { "label": "À propos", "href": "/#about" },
-      { "label": "Tarifs", "href": "/#pricing" },
+      { "label": "Plateforme", "href": "/platform" },
+      { "label": "Solutions", "href": "/solutions" },
+      { "label": "Guides", "href": "/guides" },
+      { "label": "Tarifs", "href": "/compare/church-management-software-pricing" },
       { "label": "Contact", "href": "/#contact" },
       {
         "label": "Demander une démo",

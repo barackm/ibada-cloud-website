@@ -3,7 +3,7 @@ import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { defaultLocale } from "@/dictionaries/index";
-import { PLATFORM_BRAND_COLOR, PLATFORM_LIGHT_BACKGROUND } from "./lib/brand";
+import { PLATFORM_LIGHT_BACKGROUND } from "./lib/brand";
 import { headers } from "next/headers";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
