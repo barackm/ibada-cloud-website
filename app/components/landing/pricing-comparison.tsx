@@ -217,35 +217,7 @@ export function PricingComparison({ comparison, plans }: PricingComparisonProps)
     "label" in comparison.smartFormsNote
       ? (comparison.smartFormsNote as ComparisonRow)
       : null;
-
-  const essentialRows = comparison.rows.filter(
-    (r) =>
-      ![
-        "Unlimited Smart Forms",
-        "Advanced Financial Reports",
-        "Monthly & yearly summaries",
-        "Category breakdowns & trends",
-        "Advanced Export",
-        "Filter & select what you export",
-        "Structured Excel or PDF export",
-        "Advanced financial organization",
-        "Priority support",
-      ].includes(r.label) && !["Advanced reports & structured export"].includes(r.label),
-  );
-
-  const scaleRows = comparison.rows.filter((r) =>
-    [
-      "Unlimited Smart Forms",
-      "Advanced Financial Reports",
-      "Monthly & yearly summaries",
-      "Category breakdowns & trends",
-      "Advanced Export",
-      "Filter & select what you export",
-      "Structured Excel or PDF export",
-      "Advanced financial organization",
-      "Priority support",
-    ].includes(r.label),
-  );
+  const comparisonRows = comparison.rows;
 
   const renderRow = (row: ComparisonRow) => (
     <Fragment key={row.label}>
@@ -290,16 +262,9 @@ export function PricingComparison({ comparison, plans }: PricingComparisonProps)
           </p>
 
           <MobileGroup
-            title="Core features"
-            rows={essentialRows}
+            title={comparison.title}
+            rows={comparisonRows}
             defaultOpen
-            planOrder={planOrder}
-            planLabels={comparison.planColumnLabels}
-          />
-
-          <MobileGroup
-            title="Scale only"
-            rows={scaleRows}
             planOrder={planOrder}
             planLabels={comparison.planColumnLabels}
           />
@@ -362,22 +327,7 @@ export function PricingComparison({ comparison, plans }: PricingComparisonProps)
                 </thead>
 
                 <tbody>
-                  {essentialRows.map(renderRow)}
-
-                  {scaleRows.length > 0 && (
-                    <>
-                      <tr className="align-middle">
-                        <th
-                          scope="colgroup"
-                          colSpan={4}
-                          className="border-b border-[#374151]/45 bg-transparent pt-10 pb-6 pr-4 pl-0 text-left align-middle text-base font-semibold tracking-tight text-[#F9FAFB]"
-                        >
-                          Scale only
-                        </th>
-                      </tr>
-                      {scaleRows.map(renderRow)}
-                    </>
-                  )}
+                  {comparisonRows.map(renderRow)}
                 </tbody>
               </table>
             </div>

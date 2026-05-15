@@ -4,14 +4,31 @@ import { cn } from "@/lib/utils";
 import type { WebsiteContent } from "@/src/lib/website-content";
 
 type Plan = WebsiteContent["pricing"]["plans"][number];
+type PricingLabels = WebsiteContent["pricing"]["featureLabels"];
 
 type PricingCardProps = {
   plan: Plan;
+  labels: PricingLabels;
 };
 
-export function PricingCard({ plan }: PricingCardProps) {
+function stringList(value: unknown): string[] {
+  if (!Array.isArray(value)) return [];
+  return value.filter((item): item is string => typeof item === "string");
+}
+
+export function PricingCard({ plan, labels }: PricingCardProps) {
   const isPopular = plan.popular === true;
   const accent = plan.accent;
+  const included = stringList(
+    "includedFeatures" in plan ? plan.includedFeatures : undefined,
+  );
+  const excluded = stringList(
+    "excludedFeatures" in plan ? plan.excludedFeatures : undefined,
+  );
+  const note =
+    "note" in plan && typeof plan.note === "string" && plan.note.trim().length > 0
+      ? plan.note
+      : null;
 
   return (
     <article
@@ -52,8 +69,11 @@ export function PricingCard({ plan }: PricingCardProps) {
             {plan.description}
           </p>
 
-          <ul className="mt-5 flex-1 space-y-2.5">
-            {plan.cardFeatures.map((item) => (
+          <p className="mt-5 text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[#9CA3AF]">
+            {labels.included}
+          </p>
+          <ul className="mt-3 flex-1 space-y-2.5">
+            {included.map((item) => (
               <li
                 key={item}
                 className="flex gap-2.5 text-sm leading-snug text-[#E5E7EB]"
@@ -66,6 +86,35 @@ export function PricingCard({ plan }: PricingCardProps) {
               </li>
             ))}
           </ul>
+
+          {excluded.length > 0 ? (
+            <>
+              <p className="mt-5 text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[#6B7280]">
+                {labels.notIncluded}
+              </p>
+              <ul className="mt-3 flex-1 space-y-2.5">
+                {excluded.map((item) => (
+                  <li
+                    key={item}
+                    className="flex gap-2.5 text-sm leading-snug text-[#9CA3AF]"
+                  >
+                    <span
+                      className="mt-2 inline-flex size-1.5 shrink-0 rounded-full bg-[#6B7280]"
+                      aria-hidden
+                    />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </>
+          ) : null}
+
+          {note ? (
+            <p className="mt-5 text-xs leading-relaxed text-[#D1D5DB]">
+              <span className="font-semibold text-[#9CA3AF]">{labels.note}:</span>{" "}
+              {note}
+            </p>
+          ) : null}
         </div>
 
         <div className="mt-8 shrink-0">

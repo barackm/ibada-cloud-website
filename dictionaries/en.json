@@ -74,26 +74,44 @@
   },
   "pricing": {
     "id": "pricing",
-    "title": "Pricing that scales with your church",
-    "subtitle": "Three clear plans. Compare detail below, cards stay simple.",
+    "title": "Pricing that fits your church stage",
+    "subtitle": "Four clear options with simple limits and capabilities.",
+    "featureLabels": {
+      "included": "Included",
+      "notIncluded": "Not included",
+      "note": "Note"
+    },
     "plans": [
       {
         "id": "essential",
         "name": "Essential",
-        "priceDisplay": "$9.99",
+        "priceDisplay": "$14.99",
         "priceNote": "/ month",
-        "tagline": "Get organized",
-        "description": "For small churches structuring day-to-day operations.",
+        "tagline": "Single-branch starter",
+        "description": "For small single branch churches.",
         "popular": false,
         "accent": "green",
-        "cardFeatures": [
-          "Up to 250 members · single branch location",
-          "Households & member profiles with pastoral notes",
-          "Activities, events, and attendance in one place",
-          "Income & expenses with simple categories",
-          "Lightweight reports for weekly and monthly snapshots",
-          "Email support with help documentation",
-          "Smart Forms, pledges, and automation not included"
+        "includedFeatures": [
+          "1 branch",
+          "Up to 250 members",
+          "Up to 2 Smart Forms",
+          "Member profiles",
+          "Activities and attendance",
+          "Assets",
+          "Basic income and expense tracking",
+          "Simple income and expense categories",
+          "Basic dashboard overview",
+          "Lightweight reports",
+          "Email support"
+        ],
+        "excludedFeatures": [
+          "Pledges and campaigns",
+          "Budgeting",
+          "Advanced reports",
+          "Advanced export",
+          "Multi branch management",
+          "Parish context",
+          "Remittance"
         ],
         "cta": {
           "label": "Request a demo",
@@ -103,23 +121,27 @@
       {
         "id": "growth",
         "name": "Growth",
-        "priceDisplay": "$19.99",
+        "priceDisplay": "$39.99",
         "priceNote": "/ month",
-        "tagline": "Save time on operations",
-        "description": "Everything in Essential, plus forms, pledges, and lighter automation.",
+        "tagline": "Growing church operations",
+        "description": "For growing churches and small multi branch setups.",
         "popular": true,
         "popularLabel": "Popular",
         "accent": "orange",
-        "cardFeatures": [
-          "Up to 2,000 members · up to 5 branch locations",
-          "Smart Forms for registrations, sign-ups, and custom fields up to 10 forms",
-          "Pledges, campaigns, and reminders your team can act on",
-          "Basic automation: fewer manual follow-ups on routine tasks",
-          "Export lists and ledgers to CSV or Excel anytime",
-          "Stronger finance categories without Scale-only reporting",
-          "Ideal when you outgrow spreadsheets but do not need unlimited scale",
-          "Everything in Essential is included"
+        "includedFeatures": [
+          "Up to 5 branches",
+          "Up to 2,000 members",
+          "Up to 20 Smart Forms",
+          "Pledges and campaigns",
+          "Basic budgeting",
+          "Advanced finance categories",
+          "CSV and Excel export",
+          "Monthly summaries",
+          "Branch-level permissions",
+          "User invitations and access management",
+          "Everything in Essential"
         ],
+        "note": "Additional branches: $10/month each",
         "cta": {
           "label": "Request a demo",
           "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20-%20Growth"
@@ -128,24 +150,54 @@
       {
         "id": "scale",
         "name": "Scale",
-        "priceDisplay": "$39.99",
+        "priceDisplay": "$59.99",
         "priceNote": "/ month",
-        "tagline": "Full visibility & control",
-        "description": "Everything in Growth, with unlimited scale and advanced reporting.",
+        "tagline": "Parish leadership and larger teams",
+        "description": "For parish leadership and larger multi branch churches.",
         "popular": false,
         "accent": "green",
-        "cardFeatures": [
-          "Unlimited members, branches, and Smart Forms",
-          "Advanced financial reports: summaries, categories, and trends",
-          "Structured export: filter what you need, then Excel or PDF",
-          "Deeper financial organization for audits and leadership reviews",
-          "Priority support with faster response on operational issues",
-          "Built for multi-site churches and finance teams under one roof",
-          "Everything in Growth is included, same workflows, no artificial caps"
+        "includedFeatures": [
+          "Up to 10 branches",
+          "Up to 10,000 members",
+          "Unlimited Smart Forms",
+          "Parish context",
+          "Branch and parish finance",
+          "Remittance support",
+          "Advanced budgeting",
+          "Advanced financial reports",
+          "Monthly and yearly summaries",
+          "Category breakdowns and trends",
+          "Advanced export",
+          "Priority support",
+          "Everything in Growth"
         ],
+        "note": "Additional branches: $10/month each",
         "cta": {
           "label": "Request a demo",
           "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20-%20Scale"
+        }
+      },
+      {
+        "id": "custom",
+        "name": "Custom",
+        "priceDisplay": "Custom pricing",
+        "priceNote": "",
+        "tagline": "Parish networks and complex rollouts",
+        "description": "For large parish networks, assisted migration, training, dedicated onboarding, or special reporting needs.",
+        "popular": false,
+        "accent": "green",
+        "includedFeatures": [
+          "More than 10 branches",
+          "Data migration",
+          "Team training",
+          "Custom onboarding",
+          "Special reporting needs",
+          "Priority support",
+          "Rollout assistance"
+        ],
+        "cta": {
+          "label": "Contact us",
+          "href": "mailto:hello@ibadacloud.com?subject=Ibada%20Cloud%20-%20Custom%20plan"
         }
       }
     ]
@@ -153,8 +205,8 @@
   "pricingComparison": {
     "id": "compare",
     "title": "Compare plans in detail",
-    "subtitle": "Limits, capabilities, and what Scale adds, side by side.",
-    "mobileScrollHint": "Swipe horizontally on small screens to see all plans.",
+    "subtitle": "Compare Essential, Growth, and Scale side by side.",
+    "mobileScrollHint": "Review each capability across the three standard plans.",
     "featureColumnLabel": "Capability",
     "recommendedLabel": "Popular",
     "planColumnLabels": ["Essential", "Growth", "Scale"],
@@ -163,8 +215,8 @@
       "label": "Smart Forms (overview)",
       "format": "text",
       "values": {
-        "essential": "Not included",
-        "growth": "Registrations, pledges, activities, and custom fields flow into the system.",
+        "essential": "Up to 2 Smart Forms",
+        "growth": "Up to 20 Smart Forms",
         "scale": "Unlimited forms with the same structured intake."
       }
     },
@@ -172,22 +224,52 @@
       {
         "label": "Members limit",
         "format": "text",
-        "values": { "essential": "250", "growth": "2,000", "scale": "Unlimited" }
+        "values": { "essential": "250", "growth": "2,000", "scale": "10,000" }
       },
       {
         "label": "Branches limit",
         "format": "text",
-        "values": { "essential": "1", "growth": "5", "scale": "Unlimited" }
-      },
-      {
-        "label": "Smart Forms",
-        "format": "boolean",
-        "values": { "essential": false, "growth": true, "scale": true }
+        "values": { "essential": "1", "growth": "5", "scale": "10" }
       },
       {
         "label": "Form limit",
         "format": "text",
-        "values": { "essential": "-", "growth": "~5–10 forms", "scale": "Unlimited" }
+        "values": { "essential": "2", "growth": "20", "scale": "Unlimited" }
+      },
+      {
+        "label": "Member profiles",
+        "format": "boolean",
+        "values": { "essential": true, "growth": true, "scale": true }
+      },
+      {
+        "label": "Activities and attendance",
+        "format": "boolean",
+        "values": { "essential": true, "growth": true, "scale": true }
+      },
+      {
+        "label": "Assets",
+        "format": "boolean",
+        "values": { "essential": true, "growth": true, "scale": true }
+      },
+      {
+        "label": "Basic income and expense tracking",
+        "format": "boolean",
+        "values": { "essential": true, "growth": true, "scale": true }
+      },
+      {
+        "label": "Simple income and expense categories",
+        "format": "boolean",
+        "values": { "essential": true, "growth": true, "scale": true }
+      },
+      {
+        "label": "Basic dashboard overview",
+        "format": "boolean",
+        "values": { "essential": true, "growth": true, "scale": true }
+      },
+      {
+        "label": "Lightweight reports",
+        "format": "boolean",
+        "values": { "essential": true, "growth": true, "scale": true }
       },
       {
         "label": "Pledges",
@@ -195,52 +277,77 @@
         "values": { "essential": false, "growth": true, "scale": true }
       },
       {
-        "label": "Basic automation",
+        "label": "Campaigns",
         "format": "boolean",
         "values": { "essential": false, "growth": true, "scale": true }
       },
       {
-        "label": "Basic export (CSV / Excel)",
+        "label": "Budgeting",
         "format": "boolean",
         "values": { "essential": false, "growth": true, "scale": true }
       },
       {
-        "label": "Unlimited Smart Forms",
+        "label": "Advanced finance categories",
+        "format": "boolean",
+        "values": { "essential": false, "growth": true, "scale": true }
+      },
+      {
+        "label": "CSV and Excel export",
+        "format": "boolean",
+        "values": { "essential": false, "growth": true, "scale": true }
+      },
+      {
+        "label": "Monthly summaries",
+        "format": "boolean",
+        "values": { "essential": false, "growth": true, "scale": true }
+      },
+      {
+        "label": "Branch-level permissions",
+        "format": "boolean",
+        "values": { "essential": false, "growth": true, "scale": true }
+      },
+      {
+        "label": "User invitations and access management",
+        "format": "boolean",
+        "values": { "essential": false, "growth": true, "scale": true }
+      },
+      {
+        "label": "Multi branch management",
+        "format": "boolean",
+        "values": { "essential": false, "growth": true, "scale": true }
+      },
+      {
+        "label": "Parish context",
         "format": "boolean",
         "values": { "essential": false, "growth": false, "scale": true }
       },
       {
-        "label": "Advanced Financial Reports",
+        "label": "Branch and parish finance",
         "format": "boolean",
         "values": { "essential": false, "growth": false, "scale": true }
       },
       {
-        "label": "Monthly & yearly summaries",
+        "label": "Remittance support",
         "format": "boolean",
         "values": { "essential": false, "growth": false, "scale": true }
       },
       {
-        "label": "Category breakdowns & trends",
+        "label": "Advanced financial reports",
         "format": "boolean",
         "values": { "essential": false, "growth": false, "scale": true }
       },
       {
-        "label": "Advanced Export",
+        "label": "Monthly and yearly summaries",
         "format": "boolean",
         "values": { "essential": false, "growth": false, "scale": true }
       },
       {
-        "label": "Filter & select what you export",
+        "label": "Category breakdowns and trends",
         "format": "boolean",
         "values": { "essential": false, "growth": false, "scale": true }
       },
       {
-        "label": "Structured Excel or PDF export",
-        "format": "boolean",
-        "values": { "essential": false, "growth": false, "scale": true }
-      },
-      {
-        "label": "Advanced financial organization",
+        "label": "Advanced export",
         "format": "boolean",
         "values": { "essential": false, "growth": false, "scale": true }
       },
@@ -248,26 +355,6 @@
         "label": "Priority support",
         "format": "boolean",
         "values": { "essential": false, "growth": false, "scale": true }
-      },
-      {
-        "label": "Member management",
-        "format": "boolean",
-        "values": { "essential": true, "growth": true, "scale": true }
-      },
-      {
-        "label": "Activities",
-        "format": "boolean",
-        "values": { "essential": true, "growth": true, "scale": true }
-      },
-      {
-        "label": "Basic finance tracking",
-        "format": "boolean",
-        "values": { "essential": true, "growth": true, "scale": true }
-      },
-      {
-        "label": "Simple categories",
-        "format": "boolean",
-        "values": { "essential": true, "growth": true, "scale": true }
       }
     ]
   },

@@ -22,10 +22,10 @@ export function PricingSection({ pricing }: PricingSectionProps) {
           </p>
         </InView>
 
-        <InViewGrid className="mt-10 grid w-full grid-cols-1 gap-5 sm:mt-12 sm:gap-6 lg:grid-cols-3 lg:items-stretch">
+        <InViewGrid className="mt-10 grid w-full grid-cols-1 gap-5 sm:mt-12 sm:gap-6 lg:grid-cols-2 xl:grid-cols-4 lg:items-stretch">
           {pricing.plans.map((plan) => (
             <InViewGridItem key={plan.id}>
-              <PricingCard plan={plan} />
+              <PricingCard plan={plan} labels={pricing.featureLabels} />
             </InViewGridItem>
           ))}
         </InViewGrid>
